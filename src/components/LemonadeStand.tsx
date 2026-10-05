@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
 type DeliveryStatus = 'idle' | 'delivering' | 'arrived';
@@ -104,6 +105,9 @@ export default function LemonadeStand() {
           <div className="price-row">
             <span>Buy price: ${BUY_PRICE}</span>
             <span>Sell price: ${SELL_PRICE}</span>
+          </div>
+          <div style={{ marginTop: 18 }}>
+            <Link className="button-link" href="/shop">Visit Drink Shop →</Link>
           </div>
         </div>
         <div className="hero-emoji" aria-hidden="true">
